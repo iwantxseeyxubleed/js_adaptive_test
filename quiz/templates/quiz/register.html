@@ -1,0 +1,46 @@
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
+    <div class="card shadow-sm p-4 text-center" style="max-width: 440px; width: 100%; border-radius: 16px; border: none;">
+        
+        <h3 class="fw-bold mb-2">Регистрация</h3>
+        <p class="text-muted small mb-4">Создайте аккаунт для фиксации результатов тестирования</p>
+
+        <form method="post" novalidate>
+            {% csrf_token %}
+            
+            {% for field in form %}
+                <div class="mb-3 text-start">
+                    <label class="form-label text-secondary small fw-semibold" for="{{ field.id_for_label }}">
+                        {{ field.label }}
+                    </label>
+                    
+                    {{ field }}
+                    
+                    {% if field.errors %}
+                        <div class="text-danger small mt-1" style="font-size: 0.8rem;">
+                            {{ field.errors|striptags }}
+                        </div>
+                    {% endif %}
+                    
+                    {% if field.help_text %}
+                        <div class="form-text text-muted mt-1" style="font-size: 0.75rem; line-height: 1.3;">
+                            {{ field.help_text }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-success w-100 py-2 fw-semibold mt-3" style="border-radius: 8px; background-color: #198754; border: none;">
+                Зарегистрироваться
+            </button>
+        </form>
+
+        <div class="mt-4 pt-2 border-top">
+            <span class="text-muted small">Уже есть аккаунт?</span>
+            <a href="{% url 'login' %}" class="text-decoration-none small text-primary ms-1">Войти</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
