@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Security settings for production deployment
+CSRF_TRUSTED_ORIGINS = [
+    'https://iwantxseeyxubleed-js-adaptive-test-a585.twc1.net',
+]
+
 
 # Application definition
 
