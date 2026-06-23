@@ -1,0 +1,883 @@
+[
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Какое ключевое слово используется для создания переменной с блочной областью видимости, которую нельзя переприсвоить?",
+      "code_snippet": "const x = 10;\nx = 20; // TypeError",
+      "difficulty": 1,
+      "topic": "Переменные",
+      "option_a": "let",
+      "option_b": "const",
+      "option_c": "var",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Ключевое слово const создает константу блочной области видимости. Попытка переприсвоить ей значение вызовет ошибку TypeError."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что выведет данный код при проверке типа пустого массива?",
+      "code_snippet": "console.log(typeof []);",
+      "difficulty": 1,
+      "topic": "Приведение типов",
+      "option_a": "\"array\"",
+      "option_b": "\"object\"",
+      "option_c": "\"undefined\"",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "В JavaScript массивы не являются отдельным базовым типом данных, они относятся к типу object."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Какой метод используется для добавления одного или нескольких элементов в конец массива?",
+      "code_snippet": "let arr = [1, 2];\narr.XXXXX(3);",
+      "difficulty": 2,
+      "topic": "Массивы",
+      "option_a": "push",
+      "option_b": "pop",
+      "option_c": "unshift",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Метод push() добавляет элементы в конец массива и возвращает его новую длину."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каков результат строгого сравнения null и undefined?",
+      "code_snippet": "console.log(null === undefined);",
+      "difficulty": 2,
+      "topic": "Приведение типов",
+      "option_a": "true",
+      "option_b": "false",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "При строгом сравнении (===) типы данных не приводятся. null и undefined имеют разные типы, поэтому они не равны."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что вернет вызов функции, если внутри нее не прописан оператор return?",
+      "code_snippet": "function test() { const a = 5; }\nconsole.log(test());",
+      "difficulty": 3,
+      "topic": "Переменные",
+      "option_a": "null",
+      "option_b": "0",
+      "option_c": "undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "C",
+      "explanation": "Если функция в JavaScript завершается без явного оператора return, она автоматически возвращает undefined."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат логического сложения строки и числа?",
+      "code_snippet": "console.log(\"5\" + 2);",
+      "difficulty": 3,
+      "topic": "Приведение типов",
+      "option_a": "7",
+      "option_b": "\"52\"",
+      "option_c": "NaN",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Оператор + при наличии строки выполняет конкатенацию (склеивание), приводя число к строке."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат вычитания строки из числа?",
+      "code_snippet": "console.log(\"5\" - 2);",
+      "difficulty": 4,
+      "topic": "Приведение типов",
+      "option_a": "3",
+      "option_b": "\"5-2\"",
+      "option_c": "NaN",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Математический оператор минус (-) преобразует строку в число, если это возможно. '5' становится числом 5, отсюда 5 - 2 = 3."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что произойдет при обращении к переменной, объявленной через let, до ее инициализации?",
+      "code_snippet": "console.log(a);\nlet a = 10;",
+      "difficulty": 4,
+      "topic": "Переменные",
+      "option_a": "Выведет undefined",
+      "option_b": "Выведет null",
+      "option_c": "Вызовет ошибку ReferenceError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "C",
+      "explanation": "Переменные let и const попадают в 'временную мертвую зону' (TDZ) от начала блока до их объявления. Доступ к ним вызывает ReferenceError."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как ведет себя переменная var при обращении к ней до строки объявления?",
+      "code_snippet": "console.log(b);\nvar b = 20;",
+      "difficulty": 5,
+      "topic": "Переменные",
+      "option_a": "Вызовет ReferenceError",
+      "option_b": "Выведет undefined",
+      "option_c": "Выведет 20",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Объявления var поднимаются (hoisting) в начало области видимости и инициализируются значением undefined."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким методом можно проверить, является ли объект массивом?",
+      "code_snippet": "console.log(typeof [1, 2]); // object",
+      "difficulty": 5,
+      "topic": "Массивы",
+      "option_a": "Array.isArray()",
+      "option_b": "arr.isStatic()",
+      "option_c": "instanceof SubArray",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Метод Array.isArray() надежно определяет, является ли переданное значение массивом."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Какое значение возвращает метод массива map()?",
+      "code_snippet": "const res = [1, 2].map(x => x * 2);",
+      "difficulty": 6,
+      "topic": "Массивы",
+      "option_a": "Новый массив измененных элементов",
+      "option_b": "Измененный исходный массив",
+      "option_c": "Undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Метод map() создает и возвращает НОВЫЙ массив, оставляя исходный неизменным."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что выведет сравнение двух пустых массивов через оператор нестрогого равенства?",
+      "code_snippet": "console.log([] == []);",
+      "difficulty": 6,
+      "topic": "Приведение типов",
+      "option_a": "true",
+      "option_b": "false",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Ссылочные типы (объекты, массивы) сравниваются по адресам памяти. Разные пустые массивы имеют разные адреса."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что такое замыкание (Closure) в JavaScript?",
+      "code_snippet": "function outer() {\n  let code = 1;\n  return function() { console.log(code); }\n}",
+      "difficulty": 7,
+      "topic": "Замыкания",
+      "option_a": "Способ удаления неиспользуемой памяти",
+      "option_b": "Способность функции помнить свое лексическое окружение",
+      "option_c": "Метод оптимизации циклов",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Замыкание дает внутренней функции доступ к области видимости внешней функции даже после выполнения внешней функции."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат выполнения следующего кода с замыканием счетчика?",
+      "code_snippet": "function makeCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst c = makeCounter(); c();\nconsole.log(c());",
+      "difficulty": 7,
+      "topic": "Замыкания",
+      "option_a": "1",
+      "option_b": "2",
+      "option_c": "0",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Каждый вызов возвращает значение переменной count из замкнутого лексического контекста. Второй вызов даст 2."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "В каком порядке выведутся логи при работе с макротасками setTimeout?",
+      "code_snippet": "console.log('1');\nsetTimeout(() => console.log('2'), 0);\nconsole.log('3');",
+      "difficulty": 8,
+      "topic": "Event Loop",
+      "option_a": "1, 2, 3",
+      "option_b": "1, 3, 2",
+      "option_c": "3, 1, 2",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Синхронные логи '1' и '3' выполняются сразу. Сallback из setTimeout встает в макроочередь и ждет очистки стека."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что находится на вершине цепочки прототипов почти у всех объектов в JS?",
+      "code_snippet": "const obj = {};\nconsole.log(Object.getPrototypeOf(obj));",
+      "difficulty": 8,
+      "topic": "Прототипы",
+      "option_a": "Object.prototype",
+      "option_b": "null",
+      "option_c": "Function.prototype",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Object.prototype венчает цепочку базовых объектов. Прототипом самого Object.prototype является null."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Какое значение имеет прототип самого базового Object.prototype?",
+      "code_snippet": "console.log(Object.prototype.__proto__);",
+      "difficulty": 9,
+      "topic": "Прототипы",
+      "option_a": "undefined",
+      "option_b": "Object",
+      "option_c": "null",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "C",
+      "explanation": "Прототип Object.prototype равен null, что означает логический конец цепочки наследования прототипов."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что возвращает вызов функции, объявленной со словом async?",
+      "code_snippet": "async function test() { return 1; }",
+      "difficulty": 9,
+      "topic": "Async/Await",
+      "option_a": "Число 1",
+      "option_b": "Объект Promise",
+      "option_c": "Замыкание",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Любая async функция гарантированно возвращает Promise. Возвращаемый примитив оборачивается в Promise.resolve(1)."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как поведет себя выполнение кода при использовании оператора await перед промисом?",
+      "code_snippet": "async function run() {\n  const res = await Promise.resolve(5);\n}",
+      "difficulty": 10,
+      "topic": "Async/Await",
+      "option_a": "Заблокирует весь поток выполнения браузера",
+      "option_b": "Приостановит выполнение функции до разрешения промиса",
+      "option_c": "Вызовет ошибку во время выполнения",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Оператор await приостанавливает выполнение только текущей async-функции, не блокируя основной поток браузера."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каковы приоритеты очередей в Event Loop при наличии микротасок (Promises) и макротасок (setTimeout)?",
+      "code_snippet": "setTimeout(() => console.log('macro'), 0);\nPromise.resolve().then(() => console.log('micro'));",
+      "difficulty": 10,
+      "topic": "Event Loop",
+      "option_a": "Сначала выполняются все микрозадачи, затем макрозадачи",
+      "option_b": "Макрозадачи имеют безоговорочный приоритет",
+      "option_c": "Они чередуются один к одному",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Очередь микрозадач (Microtask Queue) опустошается полностью сразу после текущего синхронного тика, перед запуском следующей макрозадачи."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Чему равен контекст исполнения (this) обычной функции, запущенной в строгом режиме без привязки к объекту?",
+      "code_snippet": "'use strict';\nfunction show() { console.log(this); }\nshow();",
+      "difficulty": 11,
+      "topic": "Замыкания",
+      "option_a": "window / global",
+      "option_b": "undefined",
+      "option_c": "null",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "В 'use strict' контекст по умолчанию равен undefined для предотвращения случайного изменения глобального объекта."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как стрелочные функции работают со своим контекстом выполнения (this)?",
+      "code_snippet": "const obj = { fn: () => console.log(this) };",
+      "difficulty": 11,
+      "topic": "Замыкания",
+      "option_a": "Берут его из внешнего лексического окружения",
+      "option_b": "Динамически привязываются к объекту obj",
+      "option_c": "Всегда равны null",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "У стрелочных функций нет своего контекста this, они наследуют его из окружающего контекста создания."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что будет результатом выполнения операции сложения объекта и массива?",
+      "code_snippet": "console.log({} + []);",
+      "difficulty": 12,
+      "topic": "Приведение типов",
+      "option_a": "\"[object Object]\"",
+      "option_b": "NaN",
+      "option_c": "0",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Массив [] превращается в пустую строку '', объект — в '[object Object]'. Результат сложения — строка '[object Object]'."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Для чего движок V8 использует Скрытые Классы (Hidden Classes)?",
+      "code_snippet": "function Point(x, y) { this.x = x; this.y = y; }",
+      "difficulty": 12,
+      "topic": "Event Loop",
+      "option_a": "Для оптимизации доступа к динамическим свойствам в памяти",
+      "option_b": "Для защиты переменных от модификации",
+      "option_c": "Для автоматического перевода кода в TypeScript",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Скрытые классы превращают динамический поиск по словарю в оптимизированный доступ по фиксированному смещению в памяти."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Какое значение выведет следующий код из-за особенностей всплытия var?",
+      "code_snippet": "var x = 1;\nfunction test() {\n  console.log(x);\n  var x = 2;\n}\ntest();",
+      "difficulty": 13,
+      "topic": "Переменные",
+      "option_a": "1",
+      "option_b": "2",
+      "option_c": "undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "C",
+      "explanation": "Внутри функции var x перекрывает глобальную x и всплывает наверх со значением undefined до инициализации."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что вернет метод slice() при следующих параметрах?",
+      "code_snippet": "const arr = [1, 2, 3, 4];\nconsole.log(arr.slice(1, 3));",
+      "difficulty": 13,
+      "topic": "Массивы",
+      "option_a": "[2, 3]",
+      "option_b": "[2, 3, 4]",
+      "option_c": "[1, 2]",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Метод slice(start, end) вырезает элементы от индекса start (включительно) до end (не включая). Индексы 1 и 2 — это [2, 3]."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат нестрогого сравнения строки и логического типа?",
+      "code_snippet": "console.log(\"0\" == false);",
+      "difficulty": 14,
+      "topic": "Приведение типов",
+      "option_a": "true",
+      "option_b": "false",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "При сравнении строка '0' и false приводятся к числу 0. 0 == 0 дает true."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет значение элемента массива после применения метода splice?",
+      "code_snippet": "let arr = [1, 2, 3];\narr.splice(1, 1, 9);\nconsole.log(arr);",
+      "difficulty": 14,
+      "topic": "Массивы",
+      "option_a": "[1, 9, 3]",
+      "option_b": "[1, 2, 9, 3]",
+      "option_c": "[1, 3]",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Splice(1, 1, 9) удаляет 1 элемент с индекса 1 (то есть число 2) и вставляет туда число 9. Результат: [1, 9, 3]."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что произойдет, если запустить бесконечный синхронный цикл внутри асинхронного таймера setTimeout?",
+      "code_snippet": "setTimeout(() => { while(true) {} }, 0);",
+      "difficulty": 15,
+      "topic": "Event Loop",
+      "option_a": "Таймер отработает на заднем плане, интерфейс останется рабочим",
+      "option_b": "Вкладка браузера намертво зависнет, так как стек Event Loop заблокируется",
+      "option_c": "Движок V8 прервет поток с ошибкой Stack Overflow",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "JavaScript однопоточен. Поток макрозадачи займет стек выполнения навсегда, заблокировав обработку любых других событий и рендеринг."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что выведет этот классический пример с циклом, var и асинхронностью?",
+      "code_snippet": "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 100);\n}",
+      "difficulty": 15,
+      "topic": "Замыкания",
+      "option_a": "0, 1, 2",
+      "option_b": "3, 3, 3",
+      "option_c": "undefined, undefined, undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Переменная var не имеет блочной видимости. К моменту выполнения таймаутов цикл завершится, и общая переменная i будет равна 3."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как изменится поведение цикла из прошлого вопроса, если var заменить на let?",
+      "code_snippet": "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 100);\n}",
+      "difficulty": 16,
+      "topic": "Переменные",
+      "option_a": "0, 1, 2",
+      "option_b": "3, 3, 3",
+      "option_c": "ReferenceError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Ключевое слово let создает новую область видимости для каждой итерации цикла, замыкая правильное текущее значение i."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что произойдет при попытке изменить замороженный объект Object.freeze в строгом режиме?",
+      "code_snippet": "'use strict';\nconst obj = { a: 1 };\nObject.freeze(obj);\nobj.a = 2;",
+      "difficulty": 16,
+      "topic": "Прототипы",
+      "option_a": "Значение изменится на 2",
+      "option_b": "Изменение проигнорируется без ошибок",
+      "option_c": "Вызовется ошибка TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "C",
+      "explanation": "Object.freeze запрещает модификацию свойств объекта. В strict mode попытка записи в read-only свойство бросает TypeError."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что будет выведено в консоль при обработке исключения в промисе?",
+      "code_snippet": "Promise.resolve()\n  .then(() => { throw new Error('fail'); })\n  .catch(() => 1)\n  .then(res => console.log(res));",
+      "difficulty": 17,
+      "topic": "Async/Await",
+      "option_a": "1",
+      "option_b": "fail",
+      "option_c": "undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Блок catch перехватывает ошибку и возвращает обычное значение 1, которое переводит цепочку в состояние fulfilled и передает в следующий then."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каков результат нестрогого сравнения пустого массива и логического false?",
+      "code_snippet": "console.log([] == false);",
+      "difficulty": 17,
+      "topic": "Приведение типов",
+      "option_a": "true",
+      "option_b": "false",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Оба операнда приводятся к числу. Массив [] становится пустой строкой '', которая приводится к числу 0. false приводится к 0. 0 == 0 истинно."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "В каком порядке выведутся логи при перекрестном срабатывании макро- и микрозадач?",
+      "code_snippet": "setTimeout(() => console.log('1'), 0);\nPromise.resolve().then(() => console.log('2'));\nconsole.log('3');",
+      "difficulty": 18,
+      "topic": "Event Loop",
+      "option_a": "3, 1, 2",
+      "option_b": "3, 2, 1",
+      "option_c": "1, 2, 3",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "3 — синхронный лог. Затем микрозадача промиса (2). И только в следующем тике выполнится макрозадача таймаута (1)."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Чему равно значение свойства __proto__ у функции-конструктора?",
+      "code_snippet": "function Car() {}\nconsole.log(Car.__proto__ === Function.prototype);",
+      "difficulty": 18,
+      "topic": "Прототипы",
+      "option_a": "true",
+      "option_b": "false",
+      "option_c": "null",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Любая функция в JavaScript является объектом, созданным встроенным конструктором Function, поэтому её __proto__ указывает на Function.prototype."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как поведет себя деструктуризация объекта, если запрашиваемого свойства в нем не существует?",
+      "code_snippet": "const { name } = { age: 20 };\nconsole.log(name);",
+      "difficulty": 19,
+      "topic": "Переменные",
+      "option_a": "Вызовет ReferenceError",
+      "option_b": "Выведет undefined",
+      "option_c": "Выведет null",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Деструктуризация отсутствующих свойств работает как обычный доступ к свойству объекта — возвращается undefined."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что возвращает метод массивов reduce(), если ему не передать начальное значение (initialValue)?",
+      "code_snippet": "const res = [1, 2, 3].reduce((acc, x) => acc + x);",
+      "difficulty": 19,
+      "topic": "Массивы",
+      "option_a": "6 (первый элемент берется за основу acc)",
+      "option_b": "NaN",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Если начальное значение не указано, аккумулятор acc инициализируется первым элементом массива (1), а обход начинается со второго (2)."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет вывод функции при попытке переопределить контекст через bind дважды?",
+      "code_snippet": "function f() { console.log(this.name); }\nconst bound = f.bind({name: '1'}).bind({name: '2'});\nbound();",
+      "difficulty": 20,
+      "topic": "Замыкания",
+      "option_a": "1",
+      "option_b": "2",
+      "option_c": "undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Метод bind() создает неизменяемую обертку. Все последующие вызовы bind() пытаются привязать контекст к самой обертке, а не к исходной функции."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что будет выведено в консоль при обработке выражения с оператором логического ИЛИ (||)?",
+      "code_snippet": "console.log(null || \"default\" || false);",
+      "difficulty": 20,
+      "topic": "Приведение типов",
+      "option_a": "\"default\"",
+      "option_b": "true",
+      "option_c": "false",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Оператор || возвращает первое 'истинное' (truthy) значение. Так как null ложно, вычисляется и возвращается 'default'."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "В каком порядке выведутся логи при обработке цепочки микрозадач Promise.resolve?",
+      "code_snippet": "Promise.resolve().then(() => {\n  console.log('A');\n  Promise.resolve().then(() => console.log('B'));\n}).then(() => console.log('C'));",
+      "difficulty": 21,
+      "topic": "Event Loop",
+      "option_a": "A, B, C",
+      "option_b": "A, C, B",
+      "option_c": "B, A, C",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Лог 'A' пишется сразу, микрозадача 'B' падает в конец текущей очереди микрозадач. Следующий внешний then ('C') планируется раньше и выполняется перед 'B'."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что произойдет при попытке изменить свойство объекта, созданного с дескриптором writable: false?",
+      "code_snippet": "const obj = {};\nObject.defineProperty(obj, 'prop', { value: 1, writable: false });\nobj.prop = 2;\nconsole.log(obj.prop);",
+      "difficulty": 21,
+      "topic": "Прототипы",
+      "option_a": "1 (в нестрогом режиме перезапись тихо проигнорируется)",
+      "option_b": "2",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Так как strict mode не указан, попытка изменить свойство с writable: false завершится без ошибки, но значение останется прежним (1)."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каков результат сложения двух пустых объектов?",
+      "code_snippet": "console.log({} + {});",
+      "difficulty": 22,
+      "topic": "Приведение типов",
+      "option_a": "\"[object Object][object Object]\"",
+      "option_b": "NaN",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Оба объекта приводятся к примитивам через toString() в '[object Object]'. При сложении они конкатенируются."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что выведет код из-за особенностей лексического контекста метода объекта и потери this?",
+      "code_snippet": "const obj = {\n  name: 'Ivan',\n  say() { console.log(this.name); }\n};\nconst call = obj.say;\ncall();",
+      "difficulty": 22,
+      "topic": "Замыкания",
+      "option_a": "Ivan",
+      "option_b": "undefined",
+      "option_c": "ReferenceError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Функция копируется в переменную call и вызывается без привязки к объекту. Контекст теряется, превращаясь в глобальный объект, где name отсутствует."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как поведет себя Promise.all, если один из переданных промисов завершится ошибкой (будет отклонен)?",
+      "code_snippet": "Promise.all([Promise.resolve(1), Promise.reject('error')]);",
+      "difficulty": 23,
+      "topic": "Async/Await",
+      "option_a": "Вернет массив результатов, где вместо успешных будут данные, а вместо упавшего — ошибка",
+      "option_b": "Мгновенно отклонится с ошибкой упавшего промиса, игнорируя остальные результаты",
+      "option_c": "Будет вечно находиться в состоянии pending",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Promise.all работает по принципу 'все или ничего'. Если хотя бы один промис падает, весь Promise.all падает в тот же момент."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат выполнения математического выражения с неявным приведением массивов?",
+      "code_snippet": "console.log([1, 2] - [1]);",
+      "difficulty": 23,
+      "topic": "Приведение типов",
+      "option_a": "NaN",
+      "option_b": "1",
+      "option_c": "[2]",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Массивы приводятся к строкам: '1,2' и '1'. При вычитании оператор (-) пытается привести их к числам. Число от '1,2' получить нельзя, выходит NaN."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что произойдет при рекурсивном планировании микрозадач через Promise.then?",
+      "code_snippet": "function run() { Promise.resolve().then(run); }\nrun();",
+      "difficulty": 24,
+      "topic": "Event Loop",
+      "option_a": "Вкладка зависнет, так как очередь микрозадач бесконечна и макрозадачи/рендеринг никогда не запустятся",
+      "option_b": "Произойдет классическая ошибка превышения стека вызовов Stack Overflow",
+      "option_c": "Движок V8 автоматически распределит вызовы на фоновые потоки",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Микрозадачи выполняются непрерывно до полного опустошения очереди. Рекурсивные микрозадачи не переполняют стек, но намертво блокируют Event Loop."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет поведение прототипного наследования при изменении свойства __proto__ напрямую на другой объект?",
+      "code_snippet": "let proto = { x: 1 };\nlet obj = Object.create(proto);\nproto.x = 2;\nconsole.log(obj.x);",
+      "difficulty": 24,
+      "topic": "Прототипы",
+      "option_a": "1",
+      "option_b": "2 (поскольку связь динамическая, изменения в прототипе видны сразу)",
+      "option_c": "undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Объекты в JS наследуют свойства динамически по ссылке на прототип. Любые изменения в родительском объекте мгновенно отражаются на наследниках."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат вычисления из-за особенности всплытия функций и переменных в одной области видимости?",
+      "code_snippet": "var test = 1;\nfunction test() {}\nconsole.log(typeof test);",
+      "difficulty": 12,
+      "topic": "Переменные",
+      "option_a": "\"function\"",
+      "option_b": "\"number\"",
+      "option_c": "\"undefined\"",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Объявление функции всплывает раньше var. Затем строка инициализации var test = 1 перезаписывает имя test числом."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как отработает логическое сравнение NaN со своим собственным значением?",
+      "code_snippet": "console.log(NaN == NaN);",
+      "difficulty": 1,
+      "topic": "Приведение типов",
+      "option_a": "true",
+      "option_b": "false",
+      "option_c": "TypeError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "NaN — единственное значение в JavaScript, которое по спецификации IEEE 754 не равно самому себе ни при каких сравнениях."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что вернет вызов функции Array.prototype.filter(), если ни один элемент не подошел под условие?",
+      "code_snippet": "const res = [1, 2].filter(x => x > 10);",
+      "difficulty": 4,
+      "topic": "Массивы",
+      "option_a": "null",
+      "option_b": "[] (пустой массив)",
+      "option_c": "undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Метод filter() всегда возвращает массив. Если совпадений нет, результатом будет корректный пустой массив."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат работы логического оператора нулевого слияния (??)?",
+      "code_snippet": "console.log(0 ?? \"default\");",
+      "difficulty": 5,
+      "topic": "Приведение типов",
+      "option_a": "0",
+      "option_b": "\"default\"",
+      "option_c": "undefined",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Оператор ?? реагирует строго на null и undefined. Поскольку 0 является валидным числом, возвращается именно 0."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что будет выведено в результате вызова метода, объявленного внутри стрелочной функции объекта?",
+      "code_snippet": "globalThis.value = 'global';\nconst obj = {\n  value: 'local',\n  show: () => console.log(this.value)\n};\nobj.show();",
+      "difficulty": 11,
+      "topic": "Замыкания",
+      "option_a": "local",
+      "option_b": "global / undefined",
+      "option_c": "ReferenceError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Стрелочная функция берет контекст из внешней области видимости (глобальной), поэтому она прочитает значение из global/window."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "В какой объект записываются свойства, объявленные через прототипы классов старого формата?",
+      "code_snippet": "function User() {}\nUser.prototype.sayHi = function() {};",
+      "difficulty": 15,
+      "topic": "Прототипы",
+      "option_a": "В скрытый внутренний объект __proto__ самого конструктора User",
+      "option_b": "В объект-прототип, который станет родителем для всех экземпляров new User()",
+      "option_c": "В глобальную память движка напрямую",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "User.prototype — это обычный объект, свойства которого будут автоматически доступны через магическую связь прототипов у всех объектов, созданных через new User."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Как завершится выполнение цепочки промисов, если в одном из средних звеньев произошла критическая ошибка?",
+      "code_snippet": "Promise.resolve()\n  .then(() => { throw 'error'; })\n  .then(() => console.log('Next'))\n  .catch(err => console.log('Caught'));",
+      "difficulty": 10,
+      "topic": "Async/Await",
+      "option_a": "Цепочка прервется, лог 'Next' пропустится, и управление уйдет сразу в catch",
+      "option_b": "Лог 'Next' выполнится, передав ошибку дальше",
+      "option_c": "Поток приложения упадет",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
+      "explanation": "Неперехваченная ошибка в then переводит промис в состояние rejected, пропуская все последующие then до первого обработчика catch."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что будет выведено в консоль при использовании макрозадачи queueMicrotask во время обработки микрозадач?",
+      "code_snippet": "setTimeout(() => console.log('macro'), 0);\nqueueMicrotask(() => console.log('micro'));\nconsole.log('sync');",
+      "difficulty": 19,
+      "topic": "Event Loop",
+      "option_a": "sync, macro, micro",
+      "option_b": "sync, micro, macro",
+      "option_c": "micro, sync, macro",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "queueMicrotask явно планирует микрозадачу. Она выполнится сразу после синхронного кода, опередив макрозадачу таймера setTimeout."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Каким будет результат проверки условий с использованием оператора логического И (&&)?",
+      "code_snippet": "console.log(true && 0 && \"hello\");",
+      "difficulty": 3,
+      "topic": "Приведение типов",
+      "option_a": "false",
+      "option_b": "0",
+      "option_c": "\"hello\"",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "B",
+      "explanation": "Оператор && запинается на первом ложном (falsy) значении и возвращает его. Число 0 ложно, поэтому возвращается 0."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Что произойдет, если заблокировать область видимости let переменной внутри фигурных скобок?",
+      "code_snippet": "{\n  let x = 5;\n}\nconsole.log(x);",
+      "difficulty": 2,
+      "topic": "Переменные",
+      "option_a": "Выведет undefined",
+      "option_b": "Выведет 5",
+      "option_c": "Вызовет ReferenceError",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "C",
+      "explanation": "Переменные let обладают строгой блочной областью видимости. За пределами фигурных скобок x не существует."
+    }
+  },
+  {
+    "model": "quiz.question",
+    "fields": {
+      "text": "Какой метод копирует часть массива, не изменяя оригинал?",
+      "code_snippet": "const source = [1, 2, 3];\nconst copy = source.XXXXX();",
+      "difficulty": 2,
+      "topic": "Массивы",
+      "option_a": "slice",
+      "option_b": "splice",
+      "option_c": "split",
+      "option_d": "Затрудняюсь ответить / Не знаю",
+      "correct_option": "A",
