@@ -110,6 +110,9 @@ USE_I18N = True
 
 USE_TZ = True
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+
 # STATIC FILES
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
