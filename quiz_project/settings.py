@@ -24,6 +24,8 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "https://iwantxseeyxubleed-js-adaptive-test-a585.twc1.net",
+    "http://iwantxseeyxubleed-js-adaptive-test-a585.twc1.net",
+    "https://*.twc1.net",
 ]
 
 # APPLICATIONS
