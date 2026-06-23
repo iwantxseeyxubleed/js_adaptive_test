@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-qy-n#f_c87&x$mnp-q8@thyehrzsz(i%7n-c1_*#3py00tbm6j'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'iwantxseeyxubleed-js-adaptive-test-a585.twc1.net',
@@ -116,7 +116,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedCopyStorage",
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
 
