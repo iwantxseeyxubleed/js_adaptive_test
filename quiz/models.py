@@ -7,7 +7,18 @@ class Question(models.Model):
     option_a = models.CharField(max_length=255, verbose_name="Вариант А")
     option_b = models.CharField(max_length=255, verbose_name="Вариант Б")
     option_c = models.CharField(max_length=255, verbose_name="Вариант С")
-    correct_option = models.CharField(max_length=1, choices=[('A', 'A'), ('B', 'B'), ('C', 'C')], verbose_name="Правильный ответ")
+    
+    option_d = models.CharField(
+        max_length=255, 
+        default="Затрудняюсь ответить / Не знаю", 
+        verbose_name="Вариант D"
+    )
+    
+    correct_option = models.CharField(
+        max_length=1, 
+        choices=[('A', 'A'), ('B', 'B'), ('C', 'C'), ('D', 'D')], 
+        verbose_name="Правильный ответ"
+    )
     difficulty = models.IntegerField(verbose_name="Сложность (1-25)")
     topic = models.CharField(max_length=255, blank=True, null=True, verbose_name="Тема вопроса")
     explanation = models.TextField(blank=True, null=True, verbose_name="Пояснение")
