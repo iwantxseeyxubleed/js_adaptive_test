@@ -17,9 +17,11 @@ DEBUG = False
 
 # Разрешаем работу и на продакшене Timeweb, и локально на твоем ПК
 ALLOWED_HOSTS = [
-    "iwantxseeyxubleed-js-adaptive-test-a585.twc1.net",
-    "127.0.0.1",
-    "localhost",
+    'iwantxseeyxubleed-js-adaptive-test-a585.twc1.net',
+    '.twc1.net',
+    '127.0.0.1',
+    'localhost',
+    '*',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
