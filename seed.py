@@ -1,7 +1,6 @@
 import os
 import django
 
-# Инициализация окружения Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'quiz_project.settings')
 django.setup()
 
@@ -86,7 +85,7 @@ def seed_db():
             option_a=item["option_a"],
             option_b=item["option_b"],
             option_c=item["option_c"],
-            option_d="Затрудняюсь ответить / Не знаю",  # Автоматом вешаем опцию D на все 60 вопросов
+            option_d="Затрудняюсь ответить / Не знаю",  
             correct_option=item["correct_option"],
             explanation=item["explanation"]
         ))
