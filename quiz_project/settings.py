@@ -12,10 +12,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-qy-n#f_c87&x$mnp-q8@thyehrzsz(i%7n-c1_*#3py00tbm6j'
 
+# Для защиты оставляем False, чтобы скрыть технические ошибки от комиссии
 DEBUG = False
 
+# Разрешаем работу и на продакшене Timeweb, и локально на твоем ПК
 ALLOWED_HOSTS = [
     "iwantxseeyxubleed-js-adaptive-test-a585.twc1.net",
+    "127.0.0.1",
+    "localhost",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -39,7 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Раздача статики
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -110,9 +114,10 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+# Меняем Manifest на безопасный CopyStorage, чтобы избежать падения при DEBUG=False
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedCopyStorage",
     },
 }
 
