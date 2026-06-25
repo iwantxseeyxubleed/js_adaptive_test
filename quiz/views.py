@@ -11,7 +11,6 @@ from .models import Question, TestSession, UserAnswer
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# ФОРМЫ АВТОРИЗАЦИИ С БУТСТРАПОМ 
 class BootstrappedUserCreationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -34,7 +33,6 @@ class BootstrappedAuthenticationForm(AuthenticationForm):
                 'placeholder': field.label
             })
 
-# АЛГОРИТМ РОББИНСА-МОНРО
 def calculate_next_difficulty(history):
     if not history:
         return 12
@@ -49,7 +47,6 @@ def calculate_next_difficulty(history):
     else:
         return max(1, last_diff - 4)
 
-# РЕЗЕРВ ПРИ СБОЯХ ИИ
 def get_fallback_mock_question(difficulty_level):
     ai_topics = ["Closures", "Event Loop", "Promises", "Prototypes"]
     selected_topic = random.choice(ai_topics)
@@ -147,7 +144,6 @@ def generate_question_via_ai(difficulty_level):
         
     return get_fallback_mock_question(difficulty_level)
 
-# VIEWS
 def register_view(request):
     if request.method == 'POST':
         form = BootstrappedUserCreationForm(request.POST)
