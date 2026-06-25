@@ -60,7 +60,6 @@ def get_fallback_mock_question(difficulty_level):
         explanation="Локальный фолбек: сбой сети при обращении к GigaChat API, активирован резервный пул."
     )
 
-# ИНТЕГРАЦИЯ С GIGACHAT API
 def generate_question_via_ai(difficulty_level):
     GIGACHAT_AUTH = "MDE5ZWE4ZmItNzY5ZS03YmEyLThiMTktOThiYjFkOWQzODkyOjQzZDUyMjE4LWE3YjgtNDFkMy05MzY3LWY5MmU0ZGNiNDdlZA=="
     
